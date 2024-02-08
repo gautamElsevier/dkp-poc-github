@@ -29,8 +29,8 @@ jobs:
         cache: maven
     - uses: s4u/maven-settings-action@v3.0.0
       with:
-        repositories: '[{"id":"central","name":"maven-dkp-core-virtual","url":"${ARTIFACTORY_URL_REF}","snapshots":{"enabled":false}}]'
-        servers: '[{"id": "central", "username": "${ARTIFACTORY_USERNAME_REF}", "password": "${ARTIFACTORY_PASSWORD_REF}"}]'
+        repositories: '[{"id":"central","name":"maven-dkp-core-virtual","url":"https://rt.artifactory.tio.systems/artifactory/maven-dkp-core-virtual","snapshots":{"enabled":false}}]'
+        servers: '[{"id": "central", "username": "svc-elsoxfdkpnonprod", "password": "AKCp5e3yCA3eyTSkJNMkoysm8Q2hV9yBATWd81hULqFe2vaKtuL9XBEUtHjrRqSj9dyMzbfeQ"}]'
     - name: Build with Maven
       run: mvn clean install
 
