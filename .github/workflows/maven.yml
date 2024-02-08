@@ -27,10 +27,10 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - uses: s4u/maven-settings-action@v3.0.0
-      with:
-        repositories: '[{"id":"central","name":"maven-dkp-core-virtual","url":"https://rt.artifactory.tio.systems/artifactory/maven-dkp-core-virtual","snapshots":{"enabled":false}}]'
-        servers: '[{"id": "central", "username": "chakrabartyg", "password": "cmVmdGtuOjAxOjE3MTAzMzEwMzg6YnFPOTQxWHhpTEVIdEtkaE04enRvTGxiZW5M"}]'
+   # - uses: s4u/maven-settings-action@v3.0.0
+   #   with:
+   #     repositories: '[{"id":"central","name":"maven-dkp-core-virtual","url":"https://rt.artifactory.tio.systems/artifactory/maven-dkp-core-virtual","snapshots":{"enabled":false}}]'
+   #     servers: '[{"id": "central", "username": "chakrabartyg", "password": "cmVmdGtuOjAxOjE3MTAzMzEwMzg6YnFPOTQxWHhpTEVIdEtkaE04enRvTGxiZW5M"}]'
     - name: Build with Maven
       run: mvn clean install
 
