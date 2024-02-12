@@ -30,7 +30,7 @@ jobs:
     - uses: gautamElsevier/maven-settings-action@v3.0.0
       with:
         repositories: '[{"id":"central","name":"maven-dkp-core-virtual","url":"https://rt.artifactory.tio.systems/artifactory/maven-dkp-core-virtual","snapshots":{"enabled":false}}]'
-        servers: '[{"id": "central", "username": "${secrets.ARTIFACTORY_USERNAME_REF}", "password": ""${secrets.ARTIFACTORY_PASSWORD_REF}""}]'
+        servers: '[{"id": "central", "username": "${secrets.ARTIFACTORY_USERNAME_REF}", "password": "${secrets.ARTIFACTORY_PASSWORD_REF}"}]'
     - name: Build with Maven
       run: mvn clean install
 
