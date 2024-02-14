@@ -26,7 +26,7 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: maven
+        # cache: maven
     - uses: gautamElsevier/maven-settings-action@v3.0.0
       with:
         repositories: '[{"id":"central","name":"maven-dkp-core-virtual","url":"https://rt.artifactory.tio.systems/artifactory/maven-dkp-core-virtual","snapshots":{"enabled":false}}]'
